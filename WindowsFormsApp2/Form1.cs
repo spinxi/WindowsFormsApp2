@@ -26,5 +26,29 @@ namespace WindowsFormsApp2
 
             label1.Text = gamodzaxeba.jami.ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Indexatori obj_indeqsatori = new Indexatori();
+
+                    double min = obj_indeqsatori[0, 0];
+                    for (int i = 0; i < 2; i++)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            if (obj_indeqsatori[i, j] < min)
+                            {
+                                min = obj_indeqsatori[i, j];
+                            }
+                        }
+                    }
+                    label2.Text = "მინიმალური რიცხვია: " + min.ToString();
+
+        }
     }
 }
